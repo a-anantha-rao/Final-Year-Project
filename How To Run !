@@ -1,0 +1,19 @@
+How to Run The Project
+Steps To Be Followed
+Step 1: Downlaod the Project
+Step 2: Install Visual Studio Code
+Step 3: Install Python in System and Python, Code Runner in VS Code
+Step 4: Open VS Code Command Prompt and Create Virtual Environment :
+Step 5: python -m venv env  
+Step 6: env/Scripts/Activate
+Step 7: Now Install all the Essential Libraries as:
+Step 8: pip install flask
+Step 9: pip install numpy
+Step 10: pip install pandas
+Step 11: pip install scikit-learn   
+Step 12: pip install matplotlib
+Step 13: Finally Check if All the Libraries are Installed and Now Run as:
+Step 14: flask run
+Step 15: Now we will get the link and click on it, it's deployed.
+Step 16: Type Ctrl + c , To Stop !
+Thank you !!!!!

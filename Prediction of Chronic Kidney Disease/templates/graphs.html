@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Algorithm Metrics</title>
+  <style>
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      background-image:linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url("/static/css/index.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      color: #f5f5f5;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+    }
+
+    .algorithm {
+      margin: 0 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .image {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="/fifth">Home</a></li>
+        </ul>
+    </header>
+  <h1><b>Algorithm Metrics</b></h1>
+  
+  <div class="container">
+    <div class="algorithm">
+      <h2 class="heading">KNN Metrics</h2>
+      <div class="image">
+        <img src="{{ url_for('static', filename='performance_graph_KNN.png') }}" alt="KNN Metrics">
+      </div>
+    </div>
+    <div class="algorithm">
+      <h2 class="heading">Decision Tree Metrics</h2>
+      <div class="image">
+        <img src="{{ url_for('static', filename='performance_graph_Decision Tree.png') }}" alt="Decision Tree Metrics">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="algorithm">
+      <h2 class="heading">Accuracy Comparison</h2>
+      <div class="image">
+        <img src="{{ url_for('static', filename='accuracy_graph1.png') }}" alt="Accuracy Comparison">
+      </div>
+    </div>
+    <div class="algorithm">
+      <h2 class="heading">Metrics Comparison</h2>
+      <div class="image">
+        <img src="{{ url_for('static', filename='performance_graph.png') }}" alt="Metrics Comparison">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

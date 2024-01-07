@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>RECRUITER PAGE</title>
+<link rel="stylesheet" href="{{url_for('static',filename='css/style2.css')}}">
+<style>
+    .header {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+    }
+
+    .header a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+    <div class="header">
+        <a href="/fifth">Home</a>
+    </div>
+    
+    <div class="container">
+
+        
+        
+        <h1><u>ENTER THE DETAILS OF THE PATIENT'S MEDICAL RECORD</u></h1>
+        <br>
+        <center>
+            <form name=frm method=post action="/result">
+                <table align=center>
+                    <tr>
+                        <td>
+                            <h1> NAME: </h1>
+                        </td> 
+                        <td>
+                            <input class="input" type="text" name="name" placeholder="ENTER PATIENT'S NAME">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1> AGE: </h1>
+                        </td> 
+                        <td>
+                            <input class="input" type="text" name="age" placeholder="ENTER PATIENT'S AGE">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1> WEIGHT: </h1>
+                        </td> 
+                        <td>
+                            <input class="input" type="text" name="weight" placeholder="ENTER PATIENT'S WEIGHT">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1> SG:</h1>
+                        </td> 
+                        <td>
+                            <input class="input" type="text" name="sg" placeholder="ENTER PATIENT'S SPECIFIC GRAVITY">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1> ALB: </h1>
+                        </td> 
+                        <td>
+                            <input class="input" type="text" name="alb" placeholder="ENTER PATIENT'S LEVEL OF ALBUMIN">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1> eGFR: </h1>
+                        </td> 
+                        <td>
+                            <input class="input" type="text" name="egfr" placeholder="ENTER PATIENT'S ESTIMATED GLOMERULAR FILTRATION RATE">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1> WBC: </h1>
+                        </td> 
+                        <td>
+                            <input class="input" type="text" name="wbc" placeholder="ENTER PATIENT'S COUNT OF WHITE BLOOD CELL'S">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1> Algorithm: </h1>
+                        </td>
+                        <td>
+                            <select class="input" name="algorithm">
+                                <option value="knn">KNN Algorithm</option>
+                                <option value="decisiontree">Decision Tree Algorithm</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="btn-field" align="center">
+                                <button type="submit" id="signupBtn">Submit</button>
+                                <button type="reset" id="signinBtn" class="disable">Reset</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </div>
+</body>
+</html>

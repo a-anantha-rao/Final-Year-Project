@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Predictions</title>
+	<style>
+		body {
+			background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url("/static/css/index.jpg");
+			background-position: center;
+			background-size: cover;
+			font-family: Arial, sans-serif;
+			margin: 0; /* Add this line to remove default body margin */
+		}
+
+		.container {
+			background-color: rgba(0, 0, 50, 0.8);
+			padding: 20px;
+		}
+
+		h1, h3 {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			color: white;
+		}
+
+		table {
+			margin: auto;
+			border-collapse: collapse;
+			border: 2px solid #333;
+			font-size: 16px;
+			font-weight: bold;
+			background-color: #fff;
+		}
+
+		th, td {
+			padding: 10px;
+			text-align: center;
+			border: 1px solid #333;
+		}
+
+		th {
+			background-color: #333;
+			color: #fff;
+		}
+
+		#predictions {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		.prediction {
+			background-color: #fff;
+			border: 2px solid #333;
+			padding: 20px;
+			width: 300px;
+			text-align: center;
+			box-shadow: 2px 2px 5px #999;
+		}
+
+		.prediction h2 {
+			margin-top: 0;
+			color: black;
+		}
+
+		.prediction p {
+			margin-top: 20px;
+			font-size: 18px;
+			font-weight: normal;
+			color: red;
+		}
+
+		#correlation {
+			margin-top: 50px;
+			padding: 20px;
+			text-align: center;
+		}
+
+		#correlation h2 {
+			color: white;
+		}
+	</style>
+	<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+	<div class="container">
+		<header>
+			
+			<h3><b>ACCURACY</b></h3>
+			<ul>
+				<li><a href="/fifth">Home</a></li>
+			</ul>
+		</header>
+
+		<table>
+			<tr>
+				<th>Algorithm</th>
+				<th>Prediction</th>
+			</tr>
+			<tr>
+				<td>Decision Tree</td>
+				<td>{{ dt_prediction }}</td>
+			</tr>
+			<tr>
+				<td>K-Nearest Neighbors</td>
+				<td>{{ knn_prediction }}</td>
+			</tr>
+		</table>
+
+		<div id="predictions">
+			<div class="prediction">
+				<h2>Decision Tree</h2>
+				<p>{{ dt_prediction }}</p>
+			</div>
+
+			<div class="prediction">
+				<h2>K-Nearest Neighbors</h2>
+				<p>{{ knn_prediction }}</p>
+			</div>
+		</div>
+
+		<div id="correlation">
+			<h2>Correlation Matrix</h2>
+			<img src="{{ url_for('static', filename='co.png') }}" alt="Correlation Matrix">
+		</div>
+	</div>
+</body>
+</html>

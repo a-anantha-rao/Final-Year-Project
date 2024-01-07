@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient Diagnosis</title>
+	<style>
+		
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+			background-image:linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url("/static/css/index.jpg");
+   background-position: center;
+   background-size:cover;
+   position: relative; 
+		}
+		.container {
+			margin: auto;
+			width: 50%;
+			padding: 20px;
+			background-color: white;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 0px;
+			color: #3c00a0;
+		}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 20px;
+		}
+		th, td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+		.result {
+			margin-top: 20px;
+			text-align: center;
+			font-size: 24px;
+			font-weight: bold;
+			color: #3c00a0;
+		}
+		.result-text {
+			font-size: 16px;
+			font-weight: bold;
+			color: red;
+
+		}
+.btn1 button{
+
+    width:20%;
+    justify-content:center;
+    flex-basis:48%;
+    background: #3c00a0;
+    color:#fff;
+    height:40px;
+    border-radius:20px;
+    border:0;
+    outline:0;
+    cursor:pointer;
+    transition: background 1s ;
+}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Patient Diagnosis</h1>
+		<h1>DECISION TREE ALGORITHM</h1>
+		
+		<table>
+			<tr>
+				<th>Patient Name:</th>
+				<td>{{ name }}</td>
+			</tr>
+			<tr>
+				<th>Age:</th>
+				<td>{{ age }}</td>
+			</tr>
+			<tr>
+				<th>Weight:</th>
+				<td>{{ weight }}</td>
+			</tr>
+			<tr>
+				<th>Specific Gravity:</th>
+				<td>{{ sg }}</td>
+			</tr>
+			<tr>
+				<th>Albumin:</th>
+				<td>{{ alb }}</td>
+			</tr>
+			<tr>
+				<th>eGFR:</th>
+				<td>{{ egfr }}</td>
+			</tr>
+			<tr>
+				<th>WBC:</th>
+				<td>{{ wbc }}</td>
+			</tr>
+		</table>
+		<div class="result">
+			Diagnosis:
+			<p class="result-text">{{ prediction2 }}</p>
+		</div>
+
+	</div>
+<br> <br> <br> <br>
+           <div class="btn1">
+                   	<center><a href="/prediction"><button style="" type="submit" id="signupBtn">RETURN</button></a></center>
+                     
+                </div>
+                   
+</body>
+</html>

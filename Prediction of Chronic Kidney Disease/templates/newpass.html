@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Password Generated</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background-image:linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url("/static/css/index.jpg");
+            background-position: center;
+            background-size: cover;
+            position: relative; 
+        }
+        .container {
+            background-color: white;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            margin: 20px 0;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>New Password Generated</h1>
+        <p>Your new password is: <strong>{{ new_password }}</strong></p>
+        <button onclick="location.href='/signin'">Sign In</button>
+    </div>
+</body>
+</html>

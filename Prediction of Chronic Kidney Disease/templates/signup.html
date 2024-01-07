@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            INDEX PAGE
+        </title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    </head>
+    <body>
+    
+         <div class="container">
+		<br><br><br>
+            <h1>PREDICTION OF KIDNEY DISEASE!!</h1>
+            <div class="form-box">
+                <h1 id="title">Sign Up</h1>
+
+                <form action="/signup" method="post">
+                <div class="input-group">
+                        
+                    <div class="input-field">
+                        <input type="text" name ="name" placeholder="Name">
+                    </div>
+                        <div class="input-field">
+                            <input type="email" name ="email" placeholder="Email">
+                        </div>
+
+                        <div class="input-field">
+                            <input type="password" name="password" placeholder="Password">
+                       </div>
+                       <div class="input-field">
+                        <input type="password" name="confirm-password" placeholder="Confirm Password">
+                   </div>
+                        <div class="btn-field">
+                         <button type="submit" id="signupBtn">Sign Up</button></a>
+                        </div>
+                    </form>
+                </form>
+                
+            </form>
+            </div>
+         </div>
+        
+    </body>
+</html>
